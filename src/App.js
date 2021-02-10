@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Greeting from './Greeting';
 
 const App = () => {
   return (
@@ -13,7 +14,10 @@ const App = () => {
     <h2>
       Hello Ray!!!
     </h2>
-    
+    <Greeting/>
+    <Greeting/>
+    <Greeting/>
+    <Greeting/>
   </>
   );
 }
