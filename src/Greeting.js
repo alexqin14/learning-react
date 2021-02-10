@@ -20,7 +20,19 @@ export const Greeting = (props) => {
         </h3>
         <ul>
         
-            {props.favoriteColors && props.favoriteColors.map(x => <li>{x}</li>)}
+            {props.favoriteColors 
+            && [
+                ... new Set(props.favoriteColors)
+                ].map(x => (
+                <li 
+                    key={x}
+                >
+                    {x}
+                </li>)
+                )
+                }
+
+            {/* array literal, [] create new set elements, array literal, set is used for uniquess*/}
             {/* boolean evaluator (boolean shortcircus) &&, if first one is false, then don't call second one */}
             {!props.favoriteColors && <li>None</li>}
         </ul>
