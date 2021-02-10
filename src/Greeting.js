@@ -22,6 +22,7 @@ export const Greeting = (props) => {
         
             {props.favoriteColors && props.favoriteColors.map(x => <li>{x}</li>)}
             {/* boolean evaluator (boolean shortcircus) &&, if first one is false, then don't call second one */}
+            {!props.favoriteColors && <li>None</li>}
         </ul>
         </>
         
