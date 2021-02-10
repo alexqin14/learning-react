@@ -1,28 +1,32 @@
 import React from 'react';
 
-export const Greeting = (props) => {
-    console.log(props);
+export const Greeting = ({
+    name
+    , favoriteNumber
+    , favoriteColors
+}) => {
+
     return (
         <>
         <h2>
-            Hello {props.name} !!! 
+            Hello {name} !!! 
         </h2>
         {/* //JS EXPRESSION {} */}
         <h3>
-            {props.name}'s favorite number is {props.favoriteNumber}
+            {name}'s favorite number is {favoriteNumber}
         </h3>
         <h3>
-            {props.name}'s favorite number plus 10 is {props.favoriteNumber + 10}
+            {name}'s favorite number plus 10 is {favoriteNumber + 10}
         </h3>
         <h3>
-            {props.name}'s favorite colors are:
+            {name}'s favorite colors are:
            
         </h3>
         <ul>
         
-            {props.favoriteColors 
+            {favoriteColors 
             && [
-                ... new Set(props.favoriteColors)
+                ... new Set(favoriteColors)
                 ].map(x => (
                 <li 
                     key={x}
@@ -34,7 +38,7 @@ export const Greeting = (props) => {
 
             {/* array literal, [] create new set elements, array literal, set is used for uniquess*/}
             {/* boolean evaluator (boolean shortcircus) &&, if first one is false, then don't call second one */}
-            {!props.favoriteColors && <li>None</li>}
+            {!favoriteColors && <li>None</li>}
         </ul>
         </>
         
