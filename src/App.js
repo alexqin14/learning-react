@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Greeting from './Greeting';
+import {Greeting} from './Greeting'; 
+// JS modules
 
 const App = () => {
   return (
